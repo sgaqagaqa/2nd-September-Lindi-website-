@@ -1,0 +1,30 @@
+provinces=['Northern Cape','Free State','North West','Gauteng','Eastern Cape']
+property_types=['Studio','Penthouse','Bungalow']
+
+prices_ranges={
+    'Studio':(50000,80000),
+    'Penthouse':(10000,20000),
+    'Bungalow':(30000,40000)
+}
+property_prices=[]
+prices_range=[]
+random=[]
+for _ in range(len(provinces)): 
+    prices_per_province=[]
+for _ in range(len(property_prices)):
+    min_price,max_price = prices_range[property_types[_]]
+    prices_per_province.append(random.randint(min_price,max_price))
+    property_prices.append(prices_per_province)
+
+total_average_prices=[]
+for i in range(len(provinces)):
+  total_price_province = sum(property_prices[i])
+  average_price_province = total_price_province/len(property_types)
+  total_average_prices.append(average_price_province)
+
+print("Total average property prices per province")
+print("-"*50)
+print("{:<15}{:<20}".format("Province", "Average Price"))
+print("-"*50)
+for i in range(len(provinces)):
+   print("<15}{:<20,.2f}".format(provinces[i],total_average_prices[i]))

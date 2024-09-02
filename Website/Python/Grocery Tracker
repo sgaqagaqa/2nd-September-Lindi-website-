@@ -1,0 +1,44 @@
+class GroceryTracker:
+    def __init__(self):
+        self.expenses = {}
+        
+        def add_expense(self, item, price):
+            if item in self.expenses:
+                self.expenses[item] += price 
+            else:
+                self.expenses[item] = price
+                
+        def total_expenses(self):
+            return sum(self.expenses.value())
+        
+        def view_expenses(self):
+            for item, price in
+            self.expenses.items(): # type: ignore
+            print(f"{item}: R{price}")
+        def main():
+            tracker = GroceryTracker()
+            
+            while True:
+                print("\nGrocery Expense Tracker")
+                print("1. Add Expense")
+                print("3. View Expense")
+                print("4. Exit")
+                
+                choice = input("Enter your choice: ")
+            if choice == "1":
+                item = input("Enter item name: ")
+                
+                price = float(input("Enter price: R"))
+                tracker.add_expense(item,price)
+                print("Expense added successfully !")
+            elif choice == "2":
+                tracker.view_expenses()
+            elif choice == "3":
+                print(f"Total Expenses: R {tracker.total_expenses()}")
+            elif choice == "4":
+                print("Exiting...")
+
+            else:
+                print("Invalid choice. Please try again.")
+                if __name__ == "__main__":
+                    main()
